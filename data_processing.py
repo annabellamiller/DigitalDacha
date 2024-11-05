@@ -144,6 +144,7 @@ def calculate_recommended_staffing(df, W_E, W_S, pop_estimate, med_inc_estimate,
 def calculate_net_income(df, fixed_cost = 500_000):
     gross_profit = df.GrossProfit.sum()
     wages = df.EmpWages.sum()
-    
+    print(f"Gross Profit: {gross_profit}")
+    print(f"Wages: {wages}")
     net_income = gross_profit - wages - fixed_cost
-    print(net_income)
+    print(f"Net Income: {net_income}")
